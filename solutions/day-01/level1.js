@@ -22,3 +22,16 @@ const factorial = (n) => {
   }
   return result;
 }
+
+const average = (arr) => {
+  return arr.reduce((acc, cur) => acc + cur) / arr.length
+}
+/* 9. Higher Order Function */
+
+/* interesting destructuring example */
+const [x, y] = [2, (value) => value ** 2]
+/*
+x // 2
+y // function(value) {return value **2}
+y(x) // 4
+*/
