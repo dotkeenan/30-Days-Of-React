@@ -141,16 +141,47 @@ const printPrice = (products) => {
 }
 
 // Print the product items as follows using forEach
-// The price of banana is 3 euros.
-// The price of mango is 6 euros.
-// The price of potato is unknown.
-// The price of avocado is 8 euros.
-// The price of coffee is 10 euros.
-// The price of tea is unknown.
-
 const printProduct = (products) => {
   products.forEach(product => {
-    console.log(`The price of ${product.product} is ${product.price} euros.`)
+    return console.log(`The price of ${product.product} is ${product.price} euros.`)
   })
 }
 printProduct(products)
+
+// Calculate the sum of all the prices using forEach
+const priceSum = (products) => {
+  let sum = 0;
+  products.forEach(product => sum += Number(product.price));
+  return sum;
+}
+console.log(priceSum(products))
+
+// Create an array of prices using map and store it in a variable prices
+const priceArray = (product) => {
+  var prices = product.map(product => product.price)
+  return prices
+}
+console.log(priceArray(products))
+
+// Filter products with prices
+const productsWithPrice = (p) => {
+  return p.filter(product => typeof product.price === 'number')
+}
+console.log(productsWithPrice(products))
+
+// Use method chaining to get the sum of the prices(map, filter, reduce)
+const sumOfPrices = (p) => {
+  return (
+    p.filter(product => typeof product.price === 'number')
+    .map(product => product.price)
+    .reduce((acc, cur) => acc + cur)
+  )
+}
+console.log(sumOfPrices(products))
+
+// Calculate the sum of all the prices using reduce only
+/* you set the optional initial value as an argument of reduce(), not the callback like (acc, cur) */
+const sumReduce = (p) => {
+  return p.reduce((acc, cur) => acc + Number(cur.price), 0)
+}
+console.log(sumReduce(products))
