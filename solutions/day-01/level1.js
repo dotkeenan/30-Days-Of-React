@@ -125,3 +125,32 @@ getPersonInfo(person) // Asabeneh Yetayeh lives in Finland.  He is 250.
 He is an Instructor and Developer. He teaches HTML, CSS, JavaScript React,
 Redux, Node, MongoDB, Python, and D3.js.  He speaks Amharic, English, and Suomi(Finnish).
 */
+
+/* Higher order functions exercises */
+const products = [
+  { product: 'banana', price: 3 },
+  { product: 'mango', price: 6 },
+  { product: 'potato', price: ' ' },
+  { product: 'avocado', price: 8 },
+  { product: 'coffee', price: 10 },
+  { product: 'tea', price: '' },
+]
+// Print the price of each product using forEach
+const printPrice = (products) => {
+  products.forEach(product => console.log(product.price))
+}
+
+// Print the product items as follows using forEach
+// The price of banana is 3 euros.
+// The price of mango is 6 euros.
+// The price of potato is unknown.
+// The price of avocado is 8 euros.
+// The price of coffee is 10 euros.
+// The price of tea is unknown.
+
+const printProduct = (products) => {
+  products.forEach(product => {
+    console.log(`The price of ${product.product} is ${product.price} euros.`)
+  })
+}
+printProduct(products)
