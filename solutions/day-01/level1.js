@@ -185,3 +185,40 @@ const sumReduce = (p) => {
   return p.reduce((acc, cur) => acc + Number(cur.price), 0)
 }
 console.log(sumReduce(products))
+
+// Find the first product which doesn't have a price value
+const findFirstWithNoPrice = (p) => {
+  return p.find(product => typeof product.price !== 'number')
+}
+console.log(findFirstWithNoPrice(products))
+
+// Check if some products do not have a price value
+const checkNoPrice = (p) => {
+  return p.some(product => typeof product.price !== 'number')
+}
+console.log(checkNoPrice(products))
+
+// Check if all the products have price value
+const checkSomePrice = (p) => {
+  return p.every(product => typeof product === 'number')
+}
+console.log(checkSomePrice(products))
+
+/*
+Explain the difference between forEach, map, filter and reduce
+forEach iterates over each element in an array and performs a callback on each element.
+map is similar to forEach but directly mutates the array it is called on, and returns it after mutating it.
+filter takes a callback and returns all array elements that satisfy the callback you provide.
+reduce is used to combine all array elements in an 'accumulating' fashion.
+
+Explain the difference between filter, find and findIndex
+filter takes a callback and returns an array filled with ALL elements that satisfied the value/callbacks conditions.
+find returns the FIRST element that satisfies the value/callback's conditions.
+findIndex returns the index value of the element that satisfies the callback/value
+
+Explain the difference between some and every
+both return a boolean.
+some checks if atleast '1' element satisfies the callback's condition
+every checks if ALL elements satisfy the callback's condition.
+
+*/
