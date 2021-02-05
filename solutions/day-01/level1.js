@@ -222,3 +222,47 @@ some checks if atleast '1' element satisfies the callback's condition
 every checks if ALL elements satisfy the callback's condition.
 
 */
+
+/* Classes Exercises */
+// Create an Animal class.The class will have name, age, color, legs properties and create different methods
+
+class Animal {
+  constructor(name, age, color, legs) {
+    this.name = name;
+    this.age = age;
+    this.color = color;
+    this.legs = legs;
+  }
+  get getName() {
+    return this.name;
+  }
+  get getAge() {
+    return this.age;
+  }
+  get getColor() {
+    return this.color;
+  }
+  get getLegs() {
+    return this.color;
+  }
+  set setName(name) {
+    this.name = name;
+  }
+  set setAge(age) {
+    this.Age = age;
+  }
+  set setColor(color) {
+    this.Color = color;
+  }
+  set setLegs(legs) {
+    this.Legs = legs;
+  }
+
+  whoAmI() {
+    return `My name is ${this.name} and I am ${this.age} years old.  My fur/skin is ${this.color} and I have ${this.legs} legs.`
+  }
+}
+
+class Dog extends Animal {
+
+}
