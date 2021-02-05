@@ -294,6 +294,29 @@ class Statistics {
     this.ages = ages;
   }
   count() {
-    return
+    return this.ages.length
+  }
+  sum() {
+    return this.ages.reduce((acc, cur) => acc + cur)
+  }
+  min() {
+    return this.ages.sort((a,b) => a - b)[0]
+  }
+  max() {
+    return this.ages.sort((a,b) => b - a)[0]
+  }
+  range() {
+    let rangeArr = this.ages.sort((a,b) => a - b)
+    return rangeArr[this.ages.length-1] - rangeArr[0]
+  }
+  mean() {
+    return (this.ages.reduce((acc, cur) => acc + cur)) / this.ages.length
   }
 }
+
+var stats = new Statistics(ages)
+console.log(stats.sum())
+console.log(stats.min())
+console.log(stats.max())
+console.log(stats.range())
+console.log(stats.mean())
