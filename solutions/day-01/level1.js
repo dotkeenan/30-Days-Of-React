@@ -243,19 +243,19 @@ class Animal {
     return this.color;
   }
   get getLegs() {
-    return this.color;
+    return this.legs;
   }
   set setName(name) {
     this.name = name;
   }
   set setAge(age) {
-    this.Age = age;
+    this.age = age;
   }
   set setColor(color) {
-    this.Color = color;
+    this.color = color;
   }
   set setLegs(legs) {
-    this.Legs = legs;
+    this.legs = legs;
   }
 
   whoAmI() {
@@ -264,5 +264,36 @@ class Animal {
 }
 
 class Dog extends Animal {
+  constructor(name, age, color, legs, species) {
+    super(name, age, color, legs)
+    this.species = species;
+  }
+  whoAmI() {
+    return `My name is ${this.name} and I am a ${this.age} year(s) old ${this.species}.  My fur/skin is ${this.color} and I have ${this.legs} legs.`
+  }
+}
 
+const animal1 = new Animal('Rex', 9, 'green', 0)
+const dog1 = new Dog('Michu', 2, 'black', 4, 'Dog')
+animal1.setLegs = 3
+console.log(animal1)
+console.log(dog1)
+console.log(animal1.whoAmI())
+console.log(dog1.whoAmI())
+
+
+/* Let's try to develop a program which calculate measure of central tendency
+of a sample(mean, median, mode) and measure of variability(range, variance, standard deviation).
+In addition to those measures find the min, max, count, percentile, and
+frequency distribution of the sample. You can create a class called Statistics
+and create all the functions which do statistical calculations as method for
+the Statistics class. Check the output below. */
+var ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
+class Statistics {
+  constructor(ages) {
+    this.ages = ages;
+  }
+  count() {
+    return
+  }
 }
