@@ -264,9 +264,34 @@ Write your name in a JSX element and store it in a name variable
 const keenan = <Keenan />
 
 Write a JSX element which displays your full name, country, title, gender, email, phone number. Use h1 for the name and p for the rest of the information and store it in a user variable
+const profile = (
+  <div class="profile">
+    <h1>dotkeenan</h1>
+    <p>USA</p>
+    <p>Web Developer</p>
+    <p>Male</p>
+    <p>nodatacollectionpls@gmail.com</p>
+    <p>911-9111</p>
+  </div>
+)
+
 Write a footer JSX element
+const footer = (
+<footer>
+  <div className='footer-wrapper'>
+    <p>copyright 2020</p>
+  </div>
+</footer>
+)
+
 Exercises: Inline Style
 Create a style object for the main JSX
+const main = (
+  <main
+    style= {{border: '2px solid orange', color: 'black', fontSize: '18px'}};
+  >
+)
+
 Create a style object for the footer and app JSX
 Add more styles to the JSX elements
 Exercises: Internal Styles
