@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import eximage from './images/eximage.jpg'
 
 // const jsxElement = <h1>This is a JSX element</h1>
 // const title = <h2>Getting Started React</h2>
@@ -41,7 +42,13 @@ const personAge = (
   </p>
 )
 const techs = ['HTML', 'CSS', 'JavaScript']
-const techsFormatted = techs.map((tech) => <li>{tech}</li>)
+const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
+
+const user = (
+  <div>
+    <img src={eximage} alt='eximage' />
+  </div>
+)
 
 const main = (
   <main>
@@ -60,11 +67,13 @@ const main = (
   </main>
 )
 
+const copyRight = 'Copyright 2020'
+
 // JSX element, footer
 const footer = (
   <footer>
     <div className='footer-wrapper'>
-      <p>Copyright 2020</p>
+      <p>{copyRight}</p>
     </div>
   </footer>
 )
@@ -74,6 +83,7 @@ const app = (
   <div className='app'>
     {header}
     {main}
+    {user}
     {footer}
   </div>
 )
