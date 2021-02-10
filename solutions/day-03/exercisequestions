@@ -1,0 +1,35 @@
+What is a module?
+A standalone set of functions and components semantically related with its own
+functional responsibility
+
+What is package?
+a file or directory described by a package.json.  They provide utility or tools
+in the form of pre-written code.
+
+What is the difference between a module and a package.
+A module is a single JavaScript file that has some reasonable functionality.
+A package is a directory with one or more modules inside of it and a package.json
+ file which has metadata about the package.
+
+What is NPM?
+Node Package Manager.  It is a software registry where a user can share and borrow
+packages for public and private use.
+
+What is Webpack?
+a module bundler.  It bundles all js files together for usage in a browser.
+
+How do you create a new React project?
+npx create-react-app name-of-your-project
+
+What are the files and folders inside a project folder(package.json,
+package-lock.json or yarn.lock, .gitignore,node_modules and public)?
+-package.json // contains metadata relevate to the project and used to manage
+the project's dependencies, scripts, version, etc.
+-package-lock.json // stores an exact versioned dependency tree rather than
+using starred versioning like package.json.  Used to guarantee the dependencies for other
+devs or prod releases.  Can lock this tree, but generally will regenerate if package.json
+changes.
+
+What is your favorite code editor (I believe that it is Visual Studio Code)?
+Add different Visual Studio Code extensions to improve your productivity(eg. prettier, ESLint etc).
+Try to make a different custom module in a different file and import it to index.js.
